@@ -54,6 +54,9 @@ _deps/
 # yt-dlp (bundled external tool)
 yt-dlp/
 
+# Deploy artifacts
+builds/
+
 # Editor / IDE
 .vscode/
 .idea/

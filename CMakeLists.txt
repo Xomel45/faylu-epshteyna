@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(faylu-epshteyna C)
+project(faylu-epshteyna VERSION 5.2 LANGUAGES C)
 
 set(CMAKE_C_STANDARD 23)
 
@@ -39,6 +39,10 @@ add_executable(faylu-epshteyna ${SOURCES})
 target_include_directories(faylu-epshteyna PRIVATE
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/vendor
+)
+
+target_compile_definitions(faylu-epshteyna PRIVATE
+    APP_VERSION="V${PROJECT_VERSION}"
 )
 
 target_link_libraries(faylu-epshteyna PRIVATE

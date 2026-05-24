@@ -178,7 +178,7 @@ int main(int argc, char *argv[]) {
      *   PROXY → default:        hardcoded address from files.h               */
     const char *proxy = no_proxy ? "" : (system_proxy ? NULL : PROXY);
 
-    printf("--- ФАЙЛЫ ЭПШТЕЙНА V5.0 (C EDITION) ---\n");
+    printf("--- ФАЙЛЫ ЭПШТЕЙНА " APP_VERSION " (C EDITION) ---\n");
     if (no_proxy)            printf("🚫 Режим БЕЗ прокси\n");
     else if (system_proxy)   printf("🌐 Системный прокси\n");
     if (g_max_quality > 0)   printf("🎚️  Качество ≤ %dp\n", g_max_quality);
