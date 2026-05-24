@@ -1,55 +1,64 @@
-# Prerequisites
-*.d
+# Build directories (CMake)
+build/
+build-win/
 
 # Object files
 *.o
-*.ko
 *.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Compiled binary (root, legacy Makefile build)
+faylu-epshteyna
+faylu-epshteyna.exe
 
-# Precompiled Headers
-*.gch
-*.pch
+# Legacy Python version
+faylu-epshteyna.py
+
+# Legacy Makefile (replaced by CMake)
+Makefile
+
+# Claude Code instructions
+CLAUDE.md
 
 # Libraries
-*.lib
 *.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
+*.lib
 *.dll
 *.so
 *.so.*
 *.dylib
+*.la
+*.lo
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# CMake generated files (if in source tree)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
 
-# Debug files
+# Precompiled headers
+*.gch
+*.pch
+
+# Debug / linker artefacts
 *.dSYM/
-*.su
-*.idb
 *.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
+*.idb
+*.ilk
+*.map
+*.exp
+*.su
 *.dwo
+
+# yt-dlp (bundled external tool)
+yt-dlp/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Misc
+*.d
