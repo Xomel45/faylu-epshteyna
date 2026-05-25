@@ -24,7 +24,7 @@ static bool is_pornhub(const char *u) {
 static bool is_vk(const char *u) {
     return !!(strstr(u, "vk.com/video") || strstr(u, "vkvideo.ru") ||
               strstr(u, "vk.com/clip")  || strstr(u, "vk.com/video_ext") ||
-              strstr(u, "ukdevilz.com"));
+              strstr(u, "ukdevilz.com")     || strstr(u, "noodlemagazine.com"));
 }
 
 static bool is_sex_studentki(const char *u) {
@@ -253,8 +253,8 @@ int main(int argc, char *argv[]) {
         extracted = (extract_pornhub(url, proxy, &info) == 0);
     } else if (is_vk(url)) {
         printf("🔍 Экстрактор: VK\n");
-        /* ukdevilz URLs look like /watch/-158673423_456239661 — rewrite to vk.com */
-        if (strstr(url, "ukdevilz.com")) {
+        /* ukdevilz / noodlemagazine: /watch/-OWNER_ID — rewrite to vk.com */
+        if (strstr(url, "ukdevilz.com") || strstr(url, "noodlemagazine.com")) {
             const char *id = strstr(url, "/watch/");
             if (id) {
                 char vk_url[256];
