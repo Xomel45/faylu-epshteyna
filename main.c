@@ -44,12 +44,17 @@ static bool is_bunkr(const char *u) {
 }
 
 static bool is_ebalko(const char *u) {
-    return !!(strstr(u, "ebalko.net") || strstr(u, "ebalka.ru") ||
-              strstr(u, "34ebalka.ru") || strstr(u, "ebalka1.ru"));
+    return !!(strstr(u, "ebalko.net") || strstr(u, "ebalka.ru")  ||
+              strstr(u, "34ebalka.ru") || strstr(u, "ebalka1.ru") ||
+              strstr(u, "ebalka.fun"));
 }
 
 static bool is_thothub(const char *u) {
     return !!strstr(u, "thothub.tube");
+}
+
+static bool is_pornonahobka(const char *u) {
+    return !!(strstr(u, "pornonahobka.icu") || strstr(u, "pornonahobka.com"));
 }
 
 static bool is_xvideos(const char *u) {
@@ -294,6 +299,9 @@ int main(int argc, char *argv[]) {
     } else if (is_thothub(url)) {
         printf("🔍 Экстрактор: Thothub\n");
         extracted = (extract_thothub(url, proxy, &info) == 0);
+    } else if (is_pornonahobka(url)) {
+        printf("🔍 Экстрактор: Pornonahobka\n");
+        extracted = (extract_pornonahobka(url, proxy, &info) == 0);
     }
 
     if (extracted) {

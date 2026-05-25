@@ -41,4 +41,7 @@ static inline bool quality_better(int h, int best_h) {
 [[nodiscard]] int extract_thothub      (const char *url, const char *proxy, VideoInfo *out);
 
 /* Yandex video preview: returns malloc'd source videoUrl, caller re-dispatches */
+[[nodiscard]] int extract_pornonahobka  (const char *url, const char *proxy, VideoInfo *out);
+
+/* Yandex video preview: returns malloc'd source videoUrl, caller re-dispatches */
 [[nodiscard]] char *yandex_extract_source_url(const char *url, const char *proxy);

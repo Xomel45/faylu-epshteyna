@@ -30,6 +30,7 @@ set(SOURCES
     extractors/yandex_video.c
     extractors/bunkr.c
     extractors/ebalko.c
+    extractors/pornonahobka.c
     extractors/thothub.c
     vendor/cJSON.c
 )
